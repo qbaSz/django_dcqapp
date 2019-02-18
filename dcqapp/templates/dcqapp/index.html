@@ -1,0 +1,9 @@
+{% if dc_entry_list %}
+    <ul>
+    {% for entry in dc_entry_list %}
+        <li><a href="/dcqapp/{{entry.commit_id}}">{{entry.commit_id}} {{entry.author}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No DC entries avaliable.</p>
+{% endif %}
