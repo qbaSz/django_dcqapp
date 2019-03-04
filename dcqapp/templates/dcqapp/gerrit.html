@@ -1,0 +1,9 @@
+{% if json_result %}
+    <ul>
+    {% for entry in json_result %}
+        <li><h2>{{ entry.owner.name }} {{ entry.subject }}</h2></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No DC entries avaliable.</p>
+{% endif %}
